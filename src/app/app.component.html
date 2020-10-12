@@ -1,0 +1,42 @@
+<div class="exchange">
+  <div class="menu-area">
+
+      <div class="dib">
+        <div class="selector-title">Base Currency</div>
+        <app-dropdown [list]="baseCurrency.dropdownList"
+          [(active)]="baseCurrency.active"></app-dropdown>
+      </div>
+
+      <div class="dib">
+        <div class="selector-title">To Currency</div>
+        <app-dropdown [list]="baseCurrency.dropdownList"
+        [(active)]="toCurrency.active"></app-dropdown>
+      </div>
+
+      <div class="dib date-picker">
+        <div class="selector-title">Date</div>
+        <input class="dateInput" style="border:solid white" (change)="changeDate($event)" type="date" name="" id="" >
+      </div>
+
+      <div class="dib">
+        <div class="selector-title">Amount</div>
+        <input class="amountInput" style="border:solid white" (input)="baseCurrency.amount = $event.target.value" type="number" name="" id="" >
+      </div>
+    </div>
+
+    <div class="date-info-area">
+      {{currencies.selected.active?'Time Period':'Time Date'}}
+      <div class="date-info">
+        {{(this.history.date|date :'dd/MM/yyyy')}}
+      </div>
+    </div>
+
+  <div class="list-area" *ngIf="!currencies.selected.active">
+    <div *ngFor="let currency of currencies.list | keyvalue">
+      <div *ngIf="currency.key==toCurrency.active"
+        class="result dib">
+        {{currency.key}} - {{(currency.value * baseCurrency.amount).toFixed(4)}}
+      </div>
+    </div>
+  </div>
+</div>

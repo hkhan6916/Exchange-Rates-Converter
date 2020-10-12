@@ -1,0 +1,80 @@
+
+.exchange {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    background: #0000006c;
+    padding: 42px;
+    max-width: 800px;
+    position: relative;
+    min-height: 590px;
+}
+.list-area {
+    margin-top: 25px;
+    z-index: 1;
+}
+.result {
+    margin: 10px;
+    padding: 18px;
+    color: white;
+    max-width: 18%;
+    box-shadow: 2px 2px 7px 4px #00000057;
+    border-radius: 5px;
+    border: solid white;
+    transition: all .5s;
+    top: 0px;
+    min-width: 140px;
+    position: relative;
+    opacity: 1;
+}
+
+.menu-area {
+    position: relative;
+}
+
+.date-picker {
+    height: 35px;
+}
+
+.dateInput{
+    background: none;
+    border-radius: 5px;
+    color: white;
+}
+
+.amountInput{
+    background: none;
+    height: 35px;
+    border-radius: 5px;
+    color: white;
+    border:solid white;
+    text-align: center;
+    width:160px;
+    font-size:20px;
+}
+
+input[type="date"]{
+    border: none;
+    height: 100%;
+    padding-left: 40px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+.date-info-area {
+    margin: auto;
+    color: white;
+    max-width: 163px;
+    border: solid white;
+    font-size: 18px;
+    border-radius: 7px;
+}
+
+.date-info {
+    font-size: 14px;
+    background: #ededed6b;
+    height: 20px;
+    padding: 15px;
+}

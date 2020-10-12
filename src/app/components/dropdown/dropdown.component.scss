@@ -1,0 +1,49 @@
+.base-list {
+    background:none;
+    z-index: 2;
+    backdrop-filter: blur(10px);
+    position: relative;
+    height: 230px;
+    overflow: auto;
+    border-radius: 5px;
+    border: solid white;
+}
+
+.base-list::-webkit-scrollbar{
+    display: none;
+}
+
+.base-item {
+    cursor: pointer;
+    padding: 5px;
+    color: white;
+    margin: 5px;
+    border-radius: 3px;
+    border: solid white;
+    opacity: 1;
+}
+
+.base-item:hover {
+    opacity: 0.6;
+}
+
+.base-active {
+    font-size: 20px;
+    padding: 7px;
+}
+
+.dropDown-triangle {
+    position: absolute;
+    right: 8px;
+    top: 0;
+    filter: invert(1);
+}
+
+.base-dropdown {
+    position: relative;
+    width: 180px;
+    color: white;
+    border:solid white;
+    height: 35px;
+    border-radius: 5px;
+}
